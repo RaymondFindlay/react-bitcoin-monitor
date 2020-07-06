@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-bitcoin-monitor/static/css/main.27fd15f6.chunk.css",
+    "main.js": "/react-bitcoin-monitor/static/js/main.4b4104b0.chunk.js",
+    "main.js.map": "/react-bitcoin-monitor/static/js/main.4b4104b0.chunk.js.map",
+    "runtime-main.js": "/react-bitcoin-monitor/static/js/runtime-main.97b71bfe.js",
+    "runtime-main.js.map": "/react-bitcoin-monitor/static/js/runtime-main.97b71bfe.js.map",
+    "static/js/2.d19b13ff.chunk.js": "/react-bitcoin-monitor/static/js/2.d19b13ff.chunk.js",
+    "static/js/2.d19b13ff.chunk.js.map": "/react-bitcoin-monitor/static/js/2.d19b13ff.chunk.js.map",
+    "index.html": "/react-bitcoin-monitor/index.html",
+    "precache-manifest.f247f5dfd814f1f6e2ecb523b8f56e75.js": "/react-bitcoin-monitor/precache-manifest.f247f5dfd814f1f6e2ecb523b8f56e75.js",
+    "service-worker.js": "/react-bitcoin-monitor/service-worker.js",
+    "static/css/main.27fd15f6.chunk.css.map": "/react-bitcoin-monitor/static/css/main.27fd15f6.chunk.css.map",
+    "static/js/2.d19b13ff.chunk.js.LICENSE.txt": "/react-bitcoin-monitor/static/js/2.d19b13ff.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.97b71bfe.js",
+    "static/js/2.d19b13ff.chunk.js",
+    "static/css/main.27fd15f6.chunk.css",
+    "static/js/main.4b4104b0.chunk.js"
+  ]
+}

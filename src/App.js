@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState } from 'react';
+import BitcoinMonitor from './components/BitcoinMonitor'
 import './App.css';
 
-function App() {
+const App = () => {
+  const [coinData, setCoinData] = useState({});
+  const [fetchingError, setFetchingError] = useState("");
+
+  const fetchCoinData = async () => {
+    const result = await fetch("https://api.coindesk.com/v1/bpi/historical/close.json/");
+
+    result.json()
+      .then(res => {
+        setCoinData(res);
+      }).catch(err => {
+        console.log(err);
+        setFetchingError(err);
+      });
+  };
+
+  useEffect(() => {
+    fetchCoinData();
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {
+        fetchingError
+          ?
+          <div>
+            {fetchingError.toLocaleString()}
+          </div>
+          :
+          <div style={{ height: 400, width: 900 }}>
+            <BitcoinMonitor coinData={coinData} />
+          </div>
+      }
     </div>
   );
 }

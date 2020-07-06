@@ -7,12 +7,15 @@ const App = () => {
   const [fetchingError, setFetchingError] = useState("");
 
   const fetchCoinData = async () => {
-    const result = await fetch("https://api.coindesk.com/v1/bpi/historical/close.json/");
+    let url = "https://api.coindesk.com/v1/bpi/historical/close.json/"
+    const result = await fetch(url);
 
-    result.json()
+    result
+      .json()
       .then(res => {
-        setCoinData(res);
-      }).catch(err => {
+        setCoinData(res)
+      })
+      .catch(err => {
         console.log(err);
         setFetchingError(err);
       });
@@ -20,7 +23,7 @@ const App = () => {
 
   useEffect(() => {
     fetchCoinData();
-  });
+  }, []);
 
   return (
     <div>
